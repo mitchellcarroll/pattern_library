@@ -1,0 +1,82 @@
+$font-stack: "Arial", "Geeza Pro", "Tahoma", "Times New Roman",
+  "SamsungOneArabic", "SamsungOne", sans-serif;
+
+$system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+  Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$font-scale: 1.125;
+
+html[dir="ltr"] {
+  font-family: $system-font;
+  font-size: 16px;
+}
+
+html[dir="rtl"] {
+  font-family: $font-stack;
+  @media screen and (max-width: 700px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 700.1px) {
+    font-size: 20px;
+  }
+}
+
+html {
+  line-height: 1.5;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: 1.3;
+  }
+  h1 {
+    font-size: 2.281em;
+  }
+
+  h2 {
+    font-size: 2.027em;
+  }
+
+  h3 {
+    font-size: 1.802em;
+  }
+
+  h4 {
+    font-size: 1.602em;
+  }
+
+  h5 {
+    font-size: 1.424em;
+  }
+
+  h6 {
+    font-size: 1.266em;
+  }
+
+  p,
+  input,
+  textarea {
+    font-size: 1em;
+  }
+
+  small,
+  label,
+  .header__locale-menu {
+    font-size: 0.899em;
+  }
+
+  input::placeholder {
+    font-size: 0.79em;
+  }
+}
+
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: inherit;
+}
