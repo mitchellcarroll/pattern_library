@@ -1,4 +1,4 @@
-# pattern_library
+# Pattern Library
 
 The purpose of the library was to distill the designs of the websites into reusable chunks of CSS that can be added to a website with their corresponding HTML to provide the bulk of the heavy lifting when it comes to providing a responsive website with common patterns used on the websites. My aim is that the code is as modular as possible to decrease unintended side effects of adding classes to elements haphazardly. It was also important that these components could be modified to fit a website’s theme or adjust to varies constraints. 
 
