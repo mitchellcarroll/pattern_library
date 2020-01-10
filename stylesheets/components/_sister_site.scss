@@ -1,0 +1,45 @@
+.sister-site {
+	@extend %sidebar-component-container;
+	&__logo-link {
+		@extend %text-decoration-none;
+		@extend %hover-none;
+	}
+	&__logo {
+		display: block;
+		margin: 0 auto 8px;
+		text-align: center;
+	}
+	&__article {
+		@extend %flex-row-no-wrap;
+		@extend %space-between;
+		@extend %text-decoration-none;
+		@extend %hover-none;
+	}
+	&__picture {
+		align-self: center;
+	}
+	&__img {
+		&::before{
+			background-color: #e2eaed;
+			padding-bottom: 70%;
+			content: " ";
+			float:  left;
+		}
+		width: 100%;
+		&::after {
+      display: inline;
+      clear: left;
+      content: " ";
+    }
+	}
+	&__title {
+		width: calc(50% - 8px);
+		align-self: center;
+		margin: 0 4px;
+		font-size: 0.889em;
+		@extend %hover-underline;
+	}
+	hr:last-of-type {
+		display: none;
+	}
+}

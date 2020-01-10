@@ -1,0 +1,46 @@
+/*Container for hosted audio player*/
+.hosted-audio {
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: start;
+  border: solid #9d474c;
+  margin: 12px;
+  /* Play/Pause Button */
+  &__play-button {
+    width: 25%;
+    height: 100%;
+    order: 0;
+    border: none;
+    background-color: #3b1016;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f9c606;
+    float: left;
+    font-weight: bold;
+    outline: none;
+  }
+  &__timeline {
+    width: 80%;
+    height: 20px;
+    align-self: center;
+    order: 1;
+    margin: 0 16px;
+    background: #9d474c;
+    border-radius: 15px;
+    float: right;
+  }
+  /*playback position*/
+  &__playhead {
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    background: #f9c606;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+  }
+}

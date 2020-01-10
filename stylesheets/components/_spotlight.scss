@@ -1,0 +1,9 @@
+.spotlight {
+	@extend %sidebar-component-container;
+	@media screen and (max-width: 823px) {
+		padding: 0;
+	}
+	&__heading {
+		@extend %sidebar-component-heading;
+	}
+}

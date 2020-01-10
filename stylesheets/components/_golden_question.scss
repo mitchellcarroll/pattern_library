@@ -1,0 +1,17 @@
+.golden-question {
+	@extend %flex-row-no-wrap;
+	justify-content: center;
+	justify-content: space-evenly;
+	margin: 8px 0;
+	&__button {
+		@extend %button;
+		flex: 0 1 50px;
+		align-self: baseline;
+		margin: 0 8px;
+		border-radius: 4px;
+		&[disabled] {
+			cursor: not-allowed;
+			opacity: 0.25;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.archive-selector {
+	@extend %flex-row-no-wrap;
+	justify-content: space-evenly;
+	margin: 8px auto;
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+		margin: 0 auto 8px;
+	}
+	&__title {
+		flex: 1 0 auto;
+		align-self: center;
+		text-align: center;
+	}
+	&__select {
+		flex: 1 0;
+		margin: 0 8px;
+		@media screen and (max-width: 767px) {
+			margin: 8px auto;
+		}
+	}
+	&__button {
+		flex: auto;
+		border: 1px solid transparent;
+		border-radius: 8px;
+		color: $white;
+		@media screen and (max-width: 767px) {
+			padding: 8px;
+		}
+	}
+}

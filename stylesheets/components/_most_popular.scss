@@ -1,0 +1,18 @@
+.most-popular {
+	&__title {
+		padding: 8px;
+		margin: 0;
+		background-color: #4d5158;
+		color: $white;
+		font-size: 16px;
+		font-weight: normal;
+	}
+	&__item {
+		display: block;
+		padding: 8px 16px;
+		background-color: #35383d;
+		color: $white;
+		@extend %text-decoration-none;
+		@extend %hover-underline;
+	}
+}

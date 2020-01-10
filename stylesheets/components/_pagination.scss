@@ -1,0 +1,45 @@
+.pagination {
+	text-align: center;
+	&__ul {
+		padding: 0;
+		margin-bottom: 16px;
+		li {
+			@extend %inline-block;
+			padding: 12px;
+			font-size: 0.889em;
+		}
+	}
+	a {
+		cursor: pointer;
+		@extend %text-decoration-none;
+	}
+	&__current {
+		color: #b52025;
+		font-weight: 700;
+		@extend %text-decoration-underline;
+	}
+	&__disabled {
+		color: #cacaca;
+		cursor: not-allowed;
+	}
+	&__ellipsis::after {
+		content: "\2026";
+	}
+	&__previous a::before,
+	&__previous.disabled::before,
+	&__next a::after,
+	&__next.disabled::after {
+		@extend %inline-block;
+	}
+	&__previous a::before,
+	&__previous.disabled::before {
+		margin-right: 8px;
+		content: "\00ab";
+	}
+
+	&__next a::after,
+	&__next.disabled::after {
+		margin-left: 8px;
+		content: "\00bb";
+	}
+}
