@@ -1,0 +1,108 @@
+$white: #ffffff;
+$black: #000000;
+
+// Placeholders
+%flex-row-no-wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: center;
+}
+
+%flex-row-wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+%inline-block {
+	display: inline-block;
+}
+
+%block {
+	display: block;
+}
+
+%space-between {
+	justify-content: space-between;
+}
+
+%sidebar-component-heading {
+	margin: 0 0 8px;
+	text-transform: uppercase;
+}
+
+%sidebar-component-container {
+	padding: 12px;
+	margin: 8px 0;
+}
+
+%button {
+	width: 100%;
+	padding: 12px 16px;
+	border: 1px solid transparent;
+	-webkit-appearance: none;
+	cursor: pointer;
+	font-size: 0.889em;
+	font-weight: 700;
+	text-align: center;
+	vertical-align: middle;
+}
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+	#{$property}: $ltr-value;
+
+	[dir="rtl"] & {
+		#{$property}: $rtl-value;
+	}
+}
+
+%text-decoration-none {
+	text-decoration: none;
+}
+
+%text-decoration-underline {
+	text-decoration: underline;
+}
+
+%hover-underline {
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+%hover-none {
+	&:hover {
+		cursor: pointer;
+		text-decoration: none;
+	}
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+.show-for-print {
+	display: none;
+}
+
+.lazyloading {
+	opacity: 0;
+	transition: opacity 400ms;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	.lazyloading {
+		transition: none;
+	}
+}
+
+img.lazyloaded {
+	opacity: 1;
+}
+
+img.lazyload:not([src]) {
+	display: none;
+	visibility: hidden;
+}
