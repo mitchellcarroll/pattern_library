@@ -1,0 +1,56 @@
+.layout {
+	@extend %flex-row-no-wrap;
+	@extend %space-between;
+	background-color: $white;
+	@media screen and (max-width: 930px) {
+		flex-direction: column;
+	}
+	&__main {
+		overflow: hidden;
+		width: 100%;
+		padding: 8px;
+	}
+	&__sidebar {
+		flex: 1 0 275px;
+		padding: 8px;
+		@media screen and (min-width: 930px) {
+			max-width: 275px;
+		}
+	}
+	&--index {
+		@extend %flex-row-wrap;
+	}
+	&__callout {
+		position: relative;
+		padding: 16px;
+		border: 1px solid #d0d2d3;
+		margin: 16px 0;
+		background-color: #dbe6f6;
+		border-radius: 4px;
+		color: #000;
+		ul {
+			padding: inherit;
+		}
+	}
+	&__two-even-col {
+		@extend %flex-row-wrap;
+		@extend %space-between;
+	}
+	&--archive {
+		@extend %flex-row-no-wrap;
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+		}
+	}
+}
+
+.page-title {
+	margin: 8px 0;
+	&--keyword {
+		padding-bottom: 8px;
+		font-weight: 700;
+	}
+	&--search {
+		color: $black;
+	}
+}

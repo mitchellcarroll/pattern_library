@@ -1,0 +1,74 @@
+.slideshow {
+	margin: auto;
+	overflow-x: hidden;
+	&__slide {
+		padding: 0 8px;
+	}
+	&__button-container {
+		text-align: center;
+	}
+	&__button {
+		@extend %button;
+		width: auto;
+		margin: 0 8px;
+		border-radius: 5px;
+		color: $black;
+		opacity: 0.6;
+    @media screen and (max-width: 500px) {
+      top: 25px;
+      padding: 8px;
+    }
+		html[dir="ltr"] &--next {
+			float: right;
+		}
+		html[dir="ltr"] &--prev {
+			float: left;
+		}
+		html[dir="rtl"] &--next {
+			float: left;
+		}
+		html[dir="rtl"] &--prev {
+			float: right;
+		}
+	}
+}
+
+@supports (position: sticky) {
+	.slideshow {
+		position: sticky;
+		&__button {
+			position: absolute;
+			&--mra-prev,
+			&--mra-next {
+				top: 40px;
+			}
+			&--next,
+			&--prev {
+				top: 190px;
+				@media screen and (max-width: 450px) {
+					top: 90px;
+				}
+			}
+			html[dir="rtl"] & {
+				&--mra-prev,
+				&--prev {
+					right: 0;
+				}
+				&--mra-next,
+				&--next {
+					left: 0;
+				}
+			}
+			html[dir="ltr"] & {
+				&--mra-prev,
+				&--prev {
+					left: 0;
+				}
+				&--mra-next,
+				&--next {
+					right: 0;
+				}
+			}
+		}
+	}
+}

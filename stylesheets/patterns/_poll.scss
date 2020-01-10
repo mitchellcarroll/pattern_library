@@ -1,0 +1,51 @@
+.poll {
+	@extend %sidebar-component-container;
+	&__heading {
+		@extend %sidebar-component-heading;
+	}
+	&__options {
+		margin: 8px 0;
+		list-style-type: none;
+	}
+	&__button-row {
+		@extend %flex-row-no-wrap;
+		@extend %space-between;
+	}
+	&__submit {
+		@extend %button;
+		width: auto;
+		margin: auto;
+		text-transform: uppercase;
+	}
+	&__results {
+		@extend %button;
+		width: auto;
+		align-self: center;
+		border: 1px solid $black;
+		margin: auto;
+		@extend %text-decoration-none;
+		text-transform: uppercase;
+		&--close {
+			@extend %block;
+			width: 75%;
+			margin-top: 8px;
+		}
+	}
+	&__answer,
+	&__percentage {
+		@extend %inline-block;
+		margin-bottom: 8px;
+	}
+	&__percentage {
+		padding: 0 8px;
+	}
+	progress {
+		@extend %block;
+		height: 8px;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		&[value] {
+			min-width: 8px;
+		}
+	}
+}

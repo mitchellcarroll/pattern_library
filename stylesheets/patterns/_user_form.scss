@@ -1,0 +1,83 @@
+.user-form {
+	padding: 16px;
+	&__top-row--feedback {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		@extend %space-between;
+		margin: 8px auto;
+		& > div {
+			width: 49%;
+			width: calc(50% - 16px);
+			@media screen and (max-width: 400px) {
+				width: 100%;
+			}
+		}
+	}
+	&__label {
+		@extend %block;
+		&--support {
+			html[dir="ltr"] & {
+				float: right;
+			}
+			html[dir="rtl"] & {
+				float: left;
+			}
+		}
+	}
+	&__policy-link {
+		min-height: 42px;
+	}
+	&__button-row {
+		@extend %flex-row-wrap;
+		@extend %space-between;
+		margin: 8px 0 0;
+	}
+	&__captcha-img {
+		height: 100%;
+		flex: 0 1 125px;
+		align-self: center;
+		border: 1px solid #cacaca;
+	}
+	&__captcha-input {
+		flex: 0 1 150px;
+		margin: 0;
+		@media screen and (max-width: 399px) {
+			flex: auto;
+			margin: 8px auto;
+		}
+	}
+	&__button {
+		@extend %button;
+		flex: 0 1 250px;
+		border-radius: 0;
+		@media screen and (max-width: 645px) {
+			width: 100%;
+			flex: auto;
+			margin: 16px auto 0;
+		}
+	}
+	&__response {
+		// successful submission
+		padding: 16px;
+		background-color: #d0d2d3;
+		color: #b52025;
+		font-weight: 700;
+		text-align: center;
+	}
+	&__error {
+		// unsuccessful submission
+		position: relative;
+		padding: 16px;
+		border: 1px solid #c53030;
+		margin: 0 0 16px 0;
+		background-color: #f8d9da;
+		border-radius: 4px;
+		color: #c53030;
+		font-weight: 700;
+	}
+	&__heading--comment {
+		padding: 8px 16px;
+		margin: 8px 0;
+	}
+}

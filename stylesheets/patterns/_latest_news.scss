@@ -1,0 +1,23 @@
+// Newsbriefs
+.latest-news {
+	padding: 8px;
+	@media screen and (max-width: 620px) {
+		padding: 0;
+	}
+	&__heading {
+		padding: 0 0 8px;
+		margin: 0 0 8px;
+		@media screen and (min-width: 700px) {
+			display: none;
+		}
+	}
+	&__title {
+		margin: 16px 0;
+		font-weight: normal;
+		@extend %text-decoration-none;
+		@extend %hover-underline;
+	}
+	hr:last-of-type {
+		display: none;
+	}
+}

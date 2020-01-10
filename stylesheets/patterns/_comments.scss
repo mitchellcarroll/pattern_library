@@ -1,0 +1,28 @@
+.comment-section {
+	margin-top: 16px;
+	&__comment {
+		padding: 0 0 8px;
+		margin: 8px 0;
+		&--reply {
+			margin: 16px auto 0;
+		}
+		html[dir="ltr"] &--reply {
+			margin-left: 32px;
+		}
+		html[dir="rtl"] &--reply {
+			margin-right: 32px;
+		}
+		&--removed {
+			padding: 8px;
+		}
+	}
+	&__date {
+		@extend %inline-block;
+	}
+	&__reply-button {
+		@extend %button;
+		@extend %inline-block;
+		width: auto;
+		@extend %text-decoration-none;
+	}
+}

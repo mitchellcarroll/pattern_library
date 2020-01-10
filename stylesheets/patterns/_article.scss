@@ -1,0 +1,125 @@
+.article {
+  &__link {
+    text-decoration: none;
+  }
+  &__p {
+    margin: 12px 0;
+    font-size: 1.125em;
+  }
+  &__date {
+    @extend %inline-block;
+    margin: 0;
+  }
+  &__source {
+    align-self: center;
+    color: #58595b;
+  }
+  &__keyword {
+    @extend %inline-block;
+    font-weight: 700;
+    @extend %text-decoration-none;
+    @extend %hover-underline;
+  }
+  &__title {
+    display: block;
+    margin: 4px 0;
+    font-weight: 700;
+    @extend %text-decoration-none;
+    @extend %hover-underline;
+    &--small {
+      font-size: 0.889em;
+    }
+    &--no-hover:hover,
+    &--no-hover:focus {
+      text-decoration: none;
+    }
+  }
+  &__source-row {
+    @extend %flex-row-wrap;
+    @extend %space-between;
+    margin: 8px 0;
+  }
+  &__sharing-icons {
+    &--bottom {
+      margin: 0 8px;
+    }
+    a {
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__teaser {
+    @extend %text-decoration-none;
+    @extend %hover-none;
+    &--article-page {
+      margin: 8px 0;
+      color: #58595b;
+    }
+  }
+  &__description {
+    font-size: 0.899em;
+    font-weight: normal;
+    @extend %text-decoration-none;
+    @extend %hover-none;
+    b {
+      font-weight: 700;
+    }
+  }
+  &__thumbnail {
+    width: 130px;
+    height: 92px;
+    @media screen and (max-width: 450px) {
+      display: none;
+    }
+    html[dir="ltr"] & {
+      margin: 8px 8px 8px 0;
+      float: left;
+    }
+    html[dir="rtl"] & {
+      margin: 8px 0 8px 8px;
+      float: right;
+    }
+  }
+  &__img,
+  &__media--img,
+  &__media--video,
+  &__media--audio {
+    display: block;
+    width: 100%;
+  }
+  figure {
+    margin-bottom: 12px;
+  }
+  &__section-title {
+    margin: 16px 0 0;
+    font-weight: 700;
+  }
+  &__related-heading {
+    padding: 8px 16px;
+    margin: 8px 0;
+  }
+  &--lead-story {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  &--block {
+    width: 48%;
+    width: calc(50% - 8px);
+    margin: 0 auto 8px;
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
+  }
+  &--listing {
+    padding-bottom: 8px;
+    border-bottom: 1px solid;
+    margin-bottom: 8px;
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}

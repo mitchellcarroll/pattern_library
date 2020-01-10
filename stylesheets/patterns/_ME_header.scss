@@ -1,0 +1,85 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	border-bottom: 10px solid;
+	@media screen and (max-width: 1023px) {
+		flex-direction: column;
+		border-bottom: none;
+		margin: 0 8px;
+	}
+	&__logo-link {
+		flex-shrink: 1;
+		border: none;
+		@media screen and (max-width: 1023px) {
+			margin: auto;
+		}
+
+	}
+	&__logo {
+		padding: 8px 0 0;
+	}
+	&__one {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		@extend %space-between;
+		@media screen and (min-width: 768px) and (max-width: 1023px) {
+			display: unset;
+			flex-direction: unset;
+			flex-wrap: unset;
+		}
+		@media screen and (min-width: 1024px) {
+			order: 2;
+		}
+	}
+	&__locale-menu {
+		display: inline-flex;
+		list-style: none;
+		html[dir="rtl"] & {
+			text-align: left;
+		}
+	}
+	&__locale-link {
+		padding: 0 12px 4px;
+		@extend %text-decoration-none;
+		a {
+			@extend %text-decoration-none;
+		}
+		&--selected {
+			padding: 8px 4px;
+		}
+	}
+	&__two {
+		@media screen and (max-width: 1023px) {
+			order: 3;
+		}
+		@media screen and (min-width: 1024px) {
+			align-self: flex-end;
+			order: 1;
+			margin: 0 auto;
+		}
+	}
+	&__navigation {
+		margin: 0 8px;
+		list-style: none;
+		text-align: center;
+		@media screen and (max-width: 1023px) {
+			order: 3;
+			margin: 0;
+		}
+	}
+	&__nav-item {
+		display: inline-flex;
+		justify-content: space-evenly;
+		margin: 0 8px;
+		font-size: 14px;
+		a {
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+		&--selected {
+			padding: 4px 8px;
+		}
+	}
+}
